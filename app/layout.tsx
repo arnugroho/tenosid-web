@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Tenos Data Teknologi",
   },
   description:
-    "Tenos builds Data & AI talent through Digdeep Academy and deploys them as ready-to-work manpower for organizations and institutions.",
+    "Tenos builds Data & AI talent through Digdeep Academy and ensures they are industry-ready for companies and institutions.",
   keywords: [
     "Tenos",
     "Digdeep Academy",

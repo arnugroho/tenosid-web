@@ -55,7 +55,7 @@ export default function Home() {
             Building Data & AI Talent for <span className="text-zinc-500">Organizations</span>
           </h1>
           <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Tenos builds Data & AI talent through Digdeep Academy and deploys them as ready-to-work manpower for companies and institutions.
+            Tenos builds Data & AI talent through Digdeep Academy and ensures they are industry-ready for companies and institutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -110,9 +110,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
                 <Briefcase className="w-10 h-10 text-zinc-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3">We Deploy</h3>
+              <h3 className="text-xl font-bold mb-3">We Bridge</h3>
               <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Ready-to-work <span className="font-semibold text-zinc-900">Data & AI Manpower</span> integrated into your organization.
+                Validated talent is connected to real opportunities - seamlessly transitioning into companies and institutions.
               </p>
             </div>
           </div>
