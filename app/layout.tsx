@@ -14,35 +14,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tenos Data Teknologi | Building Data & AI Talent",
+    default: "Tenos | AI Enablement for People & Organizations",
     template: "%s | Tenos Data Teknologi",
   },
   description:
-    "Tenos builds Data & AI talent through Digdeep Academy and ensures they are industry-ready for companies and institutions.",
+    "Tenos helps people and organizations work smarter with AI, from literacy and applied workflows to intelligent system development.",
   keywords: [
     "Tenos",
     "Digdeep Academy",
-    "Data Talent",
-    "AI Talent",
-    "Data Manpower",
+    "AI Enablement",
+    "AI Literacy",
+    "AI Workflows",
+    "AI Systems",
     "Indonesia",
     "Bootcamp",
-    "Data Science",
+    "Digital Transformation",
   ],
   authors: [{ name: "Tenos Data Teknologi" }],
   openGraph: {
-    title: "Tenos Data Teknologi | Building Data & AI Talent",
+    title: "Tenos | AI Enablement for People & Organizations",
     description:
-      "We don't search for talent. We build them. Tenos trains and deploys ready-to-work Data & AI professionals via Digdeep Academy.",
+      "From AI literacy to intelligent systems, Tenos empowers people and organizations to work smarter through practical AI enablement.",
     type: "website",
     locale: "en_US",
     siteName: "Tenos Data Teknologi",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tenos Data Teknologi | Building Data & AI Talent",
+    title: "Tenos | AI Enablement for People & Organizations",
     description:
-      "We don't search for talent. We build them. Ready-to-work Data & AI manpower via Digdeep Academy.",
+      "Tenos helps people and organizations work smarter with AI, from literacy and workflows to custom intelligent systems.",
   },
   robots: {
     index: true,

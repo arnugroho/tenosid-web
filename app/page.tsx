@@ -2,11 +2,11 @@ import Link from "next/link";
 import {
   ArrowRight,
   Check,
-  Database,
+  Sparkles,
   GraduationCap,
   Building2,
   Users,
-  Briefcase,
+  Workflow,
   BarChart3,
   Brain,
   Mail,
@@ -49,13 +49,13 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Defining the Future of Data Talent
+            AI for Everyone. Systems for the Future.
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-8 max-w-4xl mx-auto leading-tight">
-            Building Data & AI Talent for <span className="text-zinc-500">Organizations</span>
+            Empowering People & Organizations with <span className="text-zinc-500">AI</span>
           </h1>
           <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Tenos builds Data & AI talent through Digdeep Academy and ensures they are industry-ready for companies and institutions.
+            From AI literacy to intelligent systems - Tenos helps you work smarter, faster, and further.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -69,7 +69,7 @@ export default function Home() {
               href="#contact"
               className="w-full sm:w-auto px-8 py-4 bg-white text-zinc-900 border border-zinc-200 rounded-full font-medium hover:bg-zinc-50 transition-all"
             >
-              Need Data Talent?
+              Let&apos;s Talk
             </Link>
           </div>
         </div>
@@ -88,9 +88,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
                 <GraduationCap className="w-10 h-10 text-zinc-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3">We Train</h3>
+              <h3 className="text-xl font-bold mb-3">We Educate</h3>
               <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we provide intensive, industry-aligned education.
+                Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we build AI literacy and upskill individuals and teams to use AI confidently in their daily work.
               </p>
             </div>
 
@@ -99,27 +99,27 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
                 <Check className="w-10 h-10 text-zinc-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3">We Validate</h3>
+              <h3 className="text-xl font-bold mb-3">We Apply</h3>
               <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Talent is proven through <span className="font-semibold text-zinc-900">Real Projects & Mentoring</span> before graduation.
+                We help translate AI knowledge into real workflows - automating tasks, improving decisions, and making work genuinely easier.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="relative flex flex-col items-center text-center">
               <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
-                <Briefcase className="w-10 h-10 text-zinc-700" />
+                <Workflow className="w-10 h-10 text-zinc-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3">We Bridge</h3>
+              <h3 className="text-xl font-bold mb-3">We Build</h3>
               <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Validated talent is connected to real opportunities - seamlessly transitioning into companies and institutions.
+                For organizations ready to go further, we develop custom AI-powered systems tailored to their specific needs and processes.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3) TWO PILLARS OF TENOS */}
+      {/* 3) TENOS ENABLEMENT SPECTRUM */}
       <section id="digdeep" className="py-24 px-6 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -132,22 +132,22 @@ export default function Home() {
             >
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                  <Database className="w-6 h-6 text-white" />
+                  <GraduationCap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">Digdeep Academy</h3>
-                <p className="text-zinc-400 text-lg mb-8 max-w-sm">The talent factory where potential is transformed into professional capability.</p>
+                <p className="text-zinc-400 text-lg mb-8 max-w-sm">Build practical AI literacy for individuals and teams through structured, hands-on learning.</p>
                 <ul className="space-y-3 mb-8 text-zinc-300">
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    Intensive Bootcamps
+                    AI Literacy Foundations
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    Real-world Case Studies
+                    Applied Workflow Exercises
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    Expert Mentorship
+                    Guided Team Upskilling
                   </li>
                 </ul>
               </div>
@@ -167,28 +167,28 @@ export default function Home() {
             >
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-zinc-900" />
+                  <Sparkles className="w-6 h-6 text-zinc-900" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-zinc-900">Data & AI Manpower</h3>
-                <p className="text-zinc-500 text-lg mb-8 max-w-sm">Seamless deployment of trained professionals into your workforce.</p>
+                <h3 className="text-3xl font-bold mb-4 text-zinc-900">AI-Powered Systems</h3>
+                <p className="text-zinc-500 text-lg mb-8 max-w-sm">From workflow automation to custom intelligent systems, we help organizations build what moves outcomes.</p>
                 <ul className="space-y-3 mb-8 text-zinc-600">
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
-                    Pre-vetted Skills
+                    AI-Driven Workflow Design
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
-                    Immediate Productivity
+                    Decision Support & Insights
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
-                    Flexible Engagement Models
+                    Custom System Development
                   </li>
                 </ul>
               </div>
               <div className="relative z-10">
                 <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 border-b border-transparent group-hover:border-zinc-900 transition-colors">
-                  Hire Talent <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Let&apos;s Build Together <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
             </a>
@@ -200,26 +200,26 @@ export default function Home() {
       <section className="py-24 px-6 bg-zinc-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-8">
-            &quot;We don&apos;t search for talent. <br className="hidden md:block" />
-            <span className="text-zinc-400">We build them.</span>&quot;
+            &quot;AI enablement that starts with people <br className="hidden md:block" />
+            <span className="text-zinc-400">and scales to systems.</span>&quot;
           </h2>
           <div className="grid sm:grid-cols-3 gap-8 mt-16 text-left">
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Internal Academy</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Literacy First</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                We control the quality of talent from day one through our rigorous training programs at Digdeep Academy.
+                We help people understand AI clearly, then apply it meaningfully through programs at Digdeep Academy.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Real Projects</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Applied Workflows</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Every candidate has delivered actual value on real-world data projects before they reach you.
+                We turn AI knowledge into everyday execution by simplifying work, reducing friction, and accelerating results.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Ready-to-Work</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Systems That Scale</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                No lengthy onboarding needed. Our talent comes equipped with the right tools, mindset, and skills.
+                When needed, we design and build AI-powered systems tailored to organizational processes and goals.
               </p>
             </div>
           </div>
@@ -240,24 +240,24 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
+              <Users className="w-8 h-8 text-zinc-900 mb-6" />
+              <h3 className="font-bold text-lg mb-2">Professionals & Teams</h3>
+              <p className="text-zinc-500 text-sm">Individuals who want to use AI to simplify and accelerate their everyday work.</p>
+            </div>
+            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
               <Building2 className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Government Institutions</h3>
-              <p className="text-zinc-500 text-sm">Building sovereign data capabilities and modernizing public infrastructure.</p>
+              <h3 className="font-bold text-lg mb-2">Government & Public Sector</h3>
+              <p className="text-zinc-500 text-sm">Building digital and AI capability from within public institutions.</p>
             </div>
             <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
               <BarChart3 className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Companies w/o Data Teams</h3>
-              <p className="text-zinc-500 text-sm">Jumpstarting data initiatives without the overhead of hiring a full department.</p>
-            </div>
-            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
-              <Users className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">HR & Management</h3>
-              <p className="text-zinc-500 text-sm">Providing deep workforce insights and analytics for better decision making.</p>
+              <h3 className="font-bold text-lg mb-2">Business Leaders</h3>
+              <p className="text-zinc-500 text-sm">Using AI for smarter decisions, better insights, and operational efficiency.</p>
             </div>
             <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
               <Brain className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">BI/AI Initiatives</h3>
-              <p className="text-zinc-500 text-sm">Organizations ready to scale their intelligence capabilities with trained experts.</p>
+              <h3 className="font-bold text-lg mb-2">Organizations Ready to Build</h3>
+              <p className="text-zinc-500 text-sm">Companies looking to develop custom AI systems that solve real business problems.</p>
             </div>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl leading-relaxed text-zinc-600">
-            Tenos exists to solve the critical shortage of ready-to-work Data & AI talent. We believe the best way to find talent is not to search for it, but to build it ourselves. Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we forge the next generation of data experts, ensuring they are not just certified, but capable.
+            Tenos exists to close the gap between AI&apos;s potential and how people actually use it. We start with literacy - helping people understand and apply AI in their work - and go all the way to building intelligent systems that transform how organizations operate.
           </p>
         </div>
       </section>
@@ -279,9 +279,9 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 to-transparent opacity-50"></div>
 
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Start with the Right Talent</h2>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Build Your AI Journey with Tenos</h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-              Whether you want to enroll in Digdeep Academy or hire a trained Data & AI team, we&apos;re ready to help.
+              Whether you&apos;re just starting your AI journey or ready to build an intelligent system, we&apos;re here to guide you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -290,7 +290,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-white text-zinc-900 rounded-full font-bold hover:bg-zinc-100 transition-all inline-flex items-center justify-center gap-2"
               >
-                Visit Digdeep
+                Visit Digdeep Academy
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
@@ -318,7 +318,7 @@ export default function Home() {
             >
               Digdeep.id
             </a>
-            <span>— Academy & Talent Factory powered by Tenos</span>
+            <span>- Academy powered by Tenos</span>
           </p>
         </div>
       </footer>
