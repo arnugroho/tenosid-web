@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Check,
@@ -21,9 +22,15 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-zinc-100/80 bg-white/80 backdrop-blur-md">
         <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
-            <span className="inline-block w-6 h-6 rounded-md bg-zinc-900" aria-hidden />
-            Tenos
+          <Link href="/" className="flex items-center" aria-label="Tenos Home">
+            <Image
+              src="/tenos-logo.png"
+              alt="Tenos"
+              width={180}
+              height={44}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-zinc-600">
             <Link href="#how" className="hover:text-zinc-900 transition-colors">How It Works</Link>
@@ -308,7 +315,16 @@ export default function Home() {
       {/* 8) FOOTER */}
       <footer className="py-12 px-6 border-t border-zinc-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-zinc-500">
-          <p>© {new Date().getFullYear()} Tenos Data Teknologi. All rights reserved.</p>
+          <p className="flex items-center gap-2">
+            <Image
+              src="/tenos-logomark.png"
+              alt="Tenos icon"
+              width={20}
+              height={20}
+              className="h-5 w-5 rounded"
+            />
+            <span>© {new Date().getFullYear()} Tenos Data Teknologi. All rights reserved.</span>
+          </p>
           <p className="flex items-center gap-2">
             <a
               href={DIGDEEP_URL}

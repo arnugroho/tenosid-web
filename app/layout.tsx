@@ -45,6 +45,11 @@ export const metadata: Metadata = {
     description:
       "Tenos helps people and organizations work smarter with AI, from literacy and workflows to custom intelligent systems.",
   },
+  icons: {
+    icon: "/tenos-logomark.png",
+    shortcut: "/tenos-logomark.png",
+    apple: "/tenos-logomark.png",
+  },
   robots: {
     index: true,
     follow: true,
