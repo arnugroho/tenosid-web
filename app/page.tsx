@@ -55,7 +55,7 @@ export default function Home() {
             Empowering People & Organizations with <span className="text-zinc-500">AI</span>
           </h1>
           <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            From AI literacy to intelligent systems - Tenos helps you work smarter, faster, and further.
+            Start your AI journey with <span className="font-semibold text-zinc-900">Digdeep Academy</span>, then scale into intelligent systems with Tenos to work smarter, faster, and further.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
