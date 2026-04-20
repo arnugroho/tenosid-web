@@ -46,9 +46,9 @@ export const metadata: Metadata = {
       "Tenos helps people and organizations work smarter with AI, from literacy and workflows to custom intelligent systems.",
   },
   icons: {
-    icon: "/tenos-logomark.png",
-    shortcut: "/tenos-logomark.png",
-    apple: "/tenos-logomark.png",
+    icon: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
+    shortcut: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
+    apple: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
   },
   robots: {
     index: true,
