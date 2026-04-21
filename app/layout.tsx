@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     "Digdeep Academy",
     "AI Enablement",
     "AI Literacy",
+    "Data Literacy",
     "AI Workflows",
     "AI Systems",
     "Indonesia",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tenos | AI Enablement for People & Organizations",
     description:
-      "From AI literacy to intelligent systems, Tenos empowers people and organizations to work smarter through practical AI enablement.",
+      "From AI and data literacy to intelligent systems, Tenos empowers people and organizations to work smarter through practical AI enablement.",
     type: "website",
     locale: "en_US",
     siteName: "Tenos Data Teknologi",
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
       "Tenos helps people and organizations work smarter with AI, from literacy and workflows to custom intelligent systems.",
   },
   icons: {
-    icon: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
-    shortcut: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
-    apple: [{ url: "/tenos-logomark.png?v=2", type: "image/png" }],
+    icon: [{ url: "/tenos-logomark.png?v=4", type: "image/png" }],
+    shortcut: [{ url: "/tenos-logomark.png?v=4", type: "image/png" }],
+    apple: [{ url: "/tenos-logomark.png?v=4", type: "image/png" }],
   },
   robots: {
     index: true,

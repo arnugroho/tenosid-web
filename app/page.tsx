@@ -93,7 +93,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">We Educate</h3>
               <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we build AI literacy and upskill individuals and teams to use AI confidently in their daily work.
+                Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we build AI and data literacy and upskill individuals and teams to use AI confidently in their daily work.
               </p>
             </div>
 
@@ -138,11 +138,11 @@ export default function Home() {
                   <GraduationCap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">Digdeep Academy</h3>
-                <p className="text-zinc-400 text-lg mb-8 max-w-sm">Build practical AI literacy for individuals and teams through structured, hands-on learning.</p>
+                <p className="text-zinc-400 text-lg mb-8 max-w-sm">Build practical AI and data literacy for individuals and teams through structured, hands-on learning.</p>
                 <ul className="space-y-3 mb-8 text-zinc-300">
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    AI Literacy Foundations
+                    AI & Data Literacy Foundations
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
@@ -211,7 +211,7 @@ export default function Home() {
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3 text-white">Literacy First</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                We help people understand AI clearly, then apply it meaningfully through programs at Digdeep Academy.
+                We help people understand AI and data clearly, then apply them meaningfully through programs at Digdeep Academy.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
