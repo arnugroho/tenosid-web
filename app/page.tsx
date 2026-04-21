@@ -5,16 +5,12 @@ import {
   Check,
   Sparkles,
   GraduationCap,
-  Building2,
-  Users,
   Workflow,
-  BarChart3,
-  Brain,
-  Mail,
+  MessageCircle,
 } from "lucide-react";
 
 const DIGDEEP_URL = "https://digdeep.id";
-const CONTACT_EMAIL = "hello@tenos.id";
+const CONTACT_WHATSAPP = "628111010331";
 
 export default function Home() {
   return (
@@ -35,7 +31,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8 text-sm text-zinc-600">
             <Link href="#how" className="hover:text-zinc-900 transition-colors">How It Works</Link>
             <Link href="#digdeep" className="hover:text-zinc-900 transition-colors">Digdeep Academy</Link>
-            <Link href="#use-cases" className="hover:text-zinc-900 transition-colors">Use Cases</Link>
+            <Link href="#ai-powered-system" className="hover:text-zinc-900 transition-colors">AI Powered System</Link>
             <Link href="#about" className="hover:text-zinc-900 transition-colors">About</Link>
           </div>
           <Link
@@ -62,7 +58,7 @@ export default function Home() {
             Empowering People & Organizations with <span className="text-zinc-500">AI</span>
           </h1>
           <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Start your AI journey with <span className="font-semibold text-zinc-900">Digdeep Academy</span>, then scale into intelligent systems with Tenos to work smarter, faster, and further.
+            Start your AI journey with <span className="font-semibold text-zinc-900">Digdeep Academy</span>, then scale into intelligent systems with <span className="font-semibold text-zinc-900">Tenos Data Teknologi</span> to work smarter, faster, and further.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -169,6 +165,7 @@ export default function Home() {
 
             {/* Right Card */}
             <a
+              id="ai-powered-system"
               href="#contact"
               className="group relative overflow-hidden bg-zinc-50 border border-zinc-200 rounded-3xl p-10 flex flex-col min-h-[500px] justify-between transition-all hover:border-zinc-300"
             >
@@ -233,44 +230,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5) USE CASES */}
-      <section id="use-cases" className="py-24 px-6 scroll-mt-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <h2 className="text-4xl font-bold tracking-tight max-w-xl">
-              Who We Empower
-            </h2>
-            <p className="text-zinc-500 max-w-sm">
-              From public sector initiatives to private enterprise growth.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
-              <Users className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Professionals & Teams</h3>
-              <p className="text-zinc-500 text-sm">Individuals who want to use AI to simplify and accelerate their everyday work.</p>
-            </div>
-            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
-              <Building2 className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Government & Public Sector</h3>
-              <p className="text-zinc-500 text-sm">Building digital and AI capability from within public institutions.</p>
-            </div>
-            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
-              <BarChart3 className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Business Leaders</h3>
-              <p className="text-zinc-500 text-sm">Using AI for smarter decisions, better insights, and operational efficiency.</p>
-            </div>
-            <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-colors">
-              <Brain className="w-8 h-8 text-zinc-900 mb-6" />
-              <h3 className="font-bold text-lg mb-2">Organizations Ready to Build</h3>
-              <p className="text-zinc-500 text-sm">Companies looking to develop custom AI systems that solve real business problems.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6) ABOUT TENOS */}
+      {/* 5) ABOUT TENOS */}
       <section id="about" className="py-24 px-6 bg-zinc-50 scroll-mt-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
@@ -280,7 +240,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7) FINAL CTA SECTION */}
+      {/* 6) FINAL CTA SECTION */}
       <section id="contact" className="py-32 px-6 scroll-mt-20">
         <div className="max-w-5xl mx-auto bg-zinc-900 rounded-[2.5rem] p-12 md:p-24 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 to-transparent opacity-50"></div>
@@ -301,18 +261,20 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href={`mailto:${CONTACT_EMAIL}?subject=Talent%20Inquiry%20—%20Tenos`}
+                href={`https://wa.me/${CONTACT_WHATSAPP}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2"
               >
-                <Mail className="w-4 h-4" />
-                Contact Us
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Us
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8) FOOTER */}
+      {/* 7) FOOTER */}
       <footer className="py-12 px-6 border-t border-zinc-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-zinc-500">
           <p className="flex items-center gap-2">
