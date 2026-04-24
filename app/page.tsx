@@ -2,269 +2,592 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
+  ArrowUpRight,
   Check,
   Sparkles,
   GraduationCap,
   Workflow,
   MessageCircle,
+  Zap,
+  Star,
 } from "lucide-react";
 
 const DIGDEEP_URL = "https://digdeep.id";
 const CONTACT_WHATSAPP = "628111010331";
 
+const navLinks = [
+  { href: "#how", label: "How It Works" },
+  { href: "#offerings", label: "What We Do" },
+  { href: "#why", label: "Why Tenos" },
+  { href: "#about", label: "About" },
+];
+
+const marqueeWords = [
+  "AI Literacy",
+  "Applied Workflows",
+  "Intelligent Systems",
+  "Data-First Thinking",
+  "Built for Teams",
+  "Human + AI",
+  "Digdeep Academy",
+  "Tenos Data Teknologi",
+];
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white">
-      {/* NAVBAR */}
-      <header className="fixed top-0 inset-x-0 z-50 border-b border-zinc-100/80 bg-white/80 backdrop-blur-md">
-        <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center" aria-label="Tenos Home">
-            <Image
-              src="/tenos-logo.png"
-              alt="Tenos"
-              width={180}
-              height={44}
-              className="h-8 w-auto"
-              priority
-            />
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm text-zinc-600">
-            <Link href="#how" className="hover:text-zinc-900 transition-colors">How It Works</Link>
-            <Link href="#digdeep" className="hover:text-zinc-900 transition-colors">Digdeep Academy</Link>
-            <Link href="#ai-powered-system" className="hover:text-zinc-900 transition-colors">AI Powered System</Link>
-            <Link href="#about" className="hover:text-zinc-900 transition-colors">About</Link>
+    <div className="min-h-screen bg-paper text-ink font-sans selection:bg-ink selection:text-brand-yellow">
+      {/* TOP TICKER — subtle cyan accent bar */}
+      <div
+        aria-hidden
+        className="hidden md:block w-full bg-brand-cyan/95 text-ink text-[11px] font-mono tracking-[0.25em] uppercase"
+      >
+        <div className="max-w-7xl mx-auto px-6 h-8 flex items-center justify-between">
+          <span className="flex items-center gap-2">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-ink" />
+            Empowering people & organizations with AI
+          </span>
+          <span className="opacity-70">PT · Tenos Data Teknologi · 2026</span>
+        </div>
+      </div>
+
+      {/* NAVBAR — floating pill, glass, modern */}
+      <header className="sticky top-3 z-50 px-4">
+        <nav
+          aria-label="Primary"
+          className="max-w-7xl mx-auto rounded-2xl border border-ink/10 bg-paper/80 backdrop-blur-xl shadow-[0_1px_0_0_rgba(11,11,15,0.04)]"
+        >
+          <div className="px-5 h-14 flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2" aria-label="Tenos Home">
+              <Image
+                src="/tenos-logo.png"
+                alt="Tenos"
+                width={180}
+                height={44}
+                className="h-7 w-auto"
+                priority
+              />
+            </Link>
+            <ul className="hidden md:flex items-center gap-1 text-sm text-ink/70">
+              {navLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="px-3 py-1.5 rounded-full hover:text-ink hover:bg-ink/5 transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="#contact"
+              className="group hidden sm:inline-flex items-center gap-1.5 pl-4 pr-1.5 py-1.5 bg-ink text-paper rounded-full text-sm font-medium hover:bg-ink/90 transition-colors"
+            >
+              Contact
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-cyan text-ink group-hover:rotate-[-20deg] transition-transform">
+                <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={2.5} />
+              </span>
+            </Link>
           </div>
-          <Link
-            href="#contact"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 text-white rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors"
-          >
-            Contact
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
         </nav>
       </header>
 
-      {/* 1) HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-sm font-medium text-zinc-600 mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            AI for Everyone. Systems for the Future.
+      {/* HERO */}
+      <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-36 px-6 overflow-hidden">
+        {/* decorative layers */}
+        <div aria-hidden className="absolute inset-0 bg-grid pointer-events-none" />
+        <div
+          aria-hidden
+          className="absolute -top-20 -left-24 w-[420px] h-[420px] rounded-full bg-brand-cyan/30 blur-3xl pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute top-40 -right-24 w-[380px] h-[380px] rounded-full bg-brand-yellow/30 blur-3xl pointer-events-none"
+        />
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Eyebrow chip */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 pl-2 pr-4 py-1.5 rounded-full bg-paper border border-ink/10 text-xs font-mono uppercase tracking-widest text-ink/70 shadow-sm">
+              <span className="relative inline-flex items-center justify-center w-5 h-5">
+                <span className="animate-soft-pulse absolute inline-flex w-full h-full rounded-full bg-brand-cyan" />
+                <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-cyan" />
+              </span>
+              Now onboarding · AI for humans + systems
+            </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-8 max-w-4xl mx-auto leading-tight">
-            Empowering People & Organizations with <span className="text-zinc-500">AI</span>
+
+          {/* Editorial headline */}
+          <h1 className="mt-8 font-display text-center text-[44px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[96px] font-bold tracking-[-0.03em] text-ink max-w-5xl mx-auto">
+            Empowering people
+            <br className="hidden sm:block" />{" "}
+            <span className="inline-flex items-baseline gap-2">
+              & organizations with
+            </span>
+            <span className="relative inline-flex items-center justify-center ml-2">
+              {/* The yellow ring echoes the 'O' in Tenos logo */}
+              <span
+                aria-hidden
+                className="absolute inset-0 -m-2 rounded-full border-[10px] md:border-[14px] border-brand-yellow"
+              />
+              <span className="relative px-4 md:px-6 text-ink">AI</span>
+            </span>
+            .
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Start your AI journey with <span className="font-semibold text-zinc-900">Digdeep Academy</span>, then scale into intelligent systems with <span className="font-semibold text-zinc-900">Tenos Data Teknologi</span> to work smarter, faster, and further.
+
+          <p className="mt-8 text-center text-lg md:text-xl text-ink/60 max-w-2xl mx-auto leading-relaxed">
+            Start your AI journey with{" "}
+            <span className="font-semibold text-ink marker-underline">
+              Digdeep Academy
+            </span>
+            , then scale into intelligent systems with{" "}
+            <span className="font-semibold text-ink">Tenos Data Teknologi</span>
+            —so you work smarter, faster, and further.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          {/* CTAs */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              href="#digdeep"
-              className="w-full sm:w-auto px-8 py-4 bg-zinc-900 text-white rounded-full font-medium hover:bg-zinc-800 transition-all flex items-center justify-center gap-2 group"
+              href="#offerings"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 pl-6 pr-2 py-2 bg-ink text-paper rounded-full font-medium hover:bg-ink/90 transition-all"
             >
-              Explore Digdeep Academy
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              Explore what we do
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-cyan text-ink group-hover:translate-x-1 transition-transform">
+                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+              </span>
             </Link>
             <Link
               href="#contact"
-              className="w-full sm:w-auto px-8 py-4 bg-white text-zinc-900 border border-zinc-200 rounded-full font-medium hover:bg-zinc-50 transition-all"
+              className="w-full sm:w-auto px-6 py-3 bg-paper text-ink border border-ink/15 rounded-full font-medium hover:border-ink/40 hover:bg-ink/5 transition-all"
             >
               Let&apos;s Talk
             </Link>
           </div>
+
+          {/* Quick badges */}
+          <ul className="mt-10 flex flex-wrap items-center justify-center gap-2 text-xs font-mono uppercase tracking-widest text-ink/60">
+            <li className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-paper border border-ink/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan" />
+              Academy
+            </li>
+            <li className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-paper border border-ink/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
+              Workflow Automation
+            </li>
+            <li className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-paper border border-ink/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-ink" />
+              Custom AI Systems
+            </li>
+          </ul>
         </div>
       </section>
 
-      {/* 2) HOW TENOS WORKS */}
-      <section id="how" className="py-24 px-6 bg-zinc-50/50 scroll-mt-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-sm font-semibold text-zinc-500 uppercase tracking-widest mb-16 text-center">How Tenos Works</h2>
-          <div className="grid md:grid-cols-3 gap-12 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-px bg-zinc-200 -z-10"></div>
-
-            {/* Step 1 */}
-            <div className="relative flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
-                <GraduationCap className="w-10 h-10 text-zinc-700" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">We Educate</h3>
-              <p className="text-zinc-500 leading-relaxed max-w-xs">
-                Through <span className="font-semibold text-zinc-900">Digdeep Academy</span>, we build AI and data literacy and upskill individuals and teams to use AI confidently in their daily work.
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
-                <Check className="w-10 h-10 text-zinc-700" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">We Apply</h3>
-              <p className="text-zinc-500 leading-relaxed max-w-xs">
-                We help translate AI knowledge into real workflows - automating tasks, improving decisions, and making work genuinely easier.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="relative flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-white rounded-full border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
-                <Workflow className="w-10 h-10 text-zinc-700" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">We Build</h3>
-              <p className="text-zinc-500 leading-relaxed max-w-xs">
-                For organizations ready to go further, we develop custom AI-powered systems tailored to their specific needs and processes.
-              </p>
-            </div>
+      {/* MARQUEE — keywords, cyan bar */}
+      <section aria-hidden className="border-y border-ink/10 bg-brand-cyan overflow-hidden">
+        <div className="relative flex whitespace-nowrap py-4">
+          <div className="flex animate-marquee gap-10 pr-10 font-display text-ink text-2xl md:text-3xl font-semibold">
+            {[...marqueeWords, ...marqueeWords].map((w, i) => (
+              <span key={i} className="inline-flex items-center gap-10">
+                <span>{w}</span>
+                <Star className="w-4 h-4 fill-ink text-ink" />
+              </span>
+            ))}
+          </div>
+          <div
+            aria-hidden
+            className="flex animate-marquee gap-10 pr-10 font-display text-ink text-2xl md:text-3xl font-semibold"
+          >
+            {[...marqueeWords, ...marqueeWords].map((w, i) => (
+              <span key={`b-${i}`} className="inline-flex items-center gap-10">
+                <span>{w}</span>
+                <Star className="w-4 h-4 fill-ink text-ink" />
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 3) TENOS ENABLEMENT SPECTRUM */}
-      <section id="digdeep" className="py-24 px-6 scroll-mt-20">
+      {/* HOW TENOS WORKS */}
+      <section id="how" className="relative py-24 lg:py-32 px-6 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left Card */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-ink/50">
+                <span className="h-px w-8 bg-ink/30" />
+                How Tenos Works
+              </span>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
+                Three steps, from{" "}
+                <span className="marker-underline">curiosity</span> to capability.
+              </h2>
+            </div>
+            <p className="text-ink/60 max-w-sm">
+              We don&apos;t just drop AI tools on you. We walk the journey—educate,
+              apply, then build—so AI actually lands in your work.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {/* STEP 1 */}
+            <article className="group relative rounded-3xl border border-ink/10 bg-paper p-8 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(11,11,15,0.15)] transition-all">
+              <div className="flex items-start justify-between mb-10">
+                <span className="font-display text-5xl font-bold text-ink/10 leading-none">
+                  01
+                </span>
+                <div className="w-14 h-14 rounded-2xl bg-brand-cyan-soft text-ink flex items-center justify-center">
+                  <GraduationCap className="w-7 h-7" strokeWidth={2} />
+                </div>
+              </div>
+              <h3 className="font-display text-2xl font-bold mb-2">We Educate</h3>
+              <p className="text-ink/60 leading-relaxed">
+                Through{" "}
+                <span className="font-semibold text-ink">Digdeep Academy</span>,
+                we build AI and data literacy—upskilling individuals and teams
+                to use AI confidently in daily work.
+              </p>
+              <div className="mt-6 h-1 w-10 bg-brand-cyan rounded-full group-hover:w-20 transition-all" />
+            </article>
+
+            {/* STEP 2 */}
+            <article className="group relative rounded-3xl border border-ink/10 bg-paper p-8 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(11,11,15,0.15)] transition-all">
+              <div className="flex items-start justify-between mb-10">
+                <span className="font-display text-5xl font-bold text-ink/10 leading-none">
+                  02
+                </span>
+                <div className="w-14 h-14 rounded-2xl bg-brand-yellow-soft text-ink flex items-center justify-center">
+                  <Zap className="w-7 h-7" strokeWidth={2} />
+                </div>
+              </div>
+              <h3 className="font-display text-2xl font-bold mb-2">We Apply</h3>
+              <p className="text-ink/60 leading-relaxed">
+                We translate AI knowledge into real workflows—automating tasks,
+                improving decisions, and making work genuinely easier.
+              </p>
+              <div className="mt-6 h-1 w-10 bg-brand-yellow rounded-full group-hover:w-20 transition-all" />
+            </article>
+
+            {/* STEP 3 */}
+            <article className="group relative rounded-3xl border border-ink/10 bg-ink text-paper p-8 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(11,11,15,0.4)] transition-all overflow-hidden">
+              <div
+                aria-hidden
+                className="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-brand-cyan/20 blur-3xl"
+              />
+              <div className="relative flex items-start justify-between mb-10">
+                <span className="font-display text-5xl font-bold text-paper/15 leading-none">
+                  03
+                </span>
+                <div className="w-14 h-14 rounded-2xl bg-paper/10 text-paper flex items-center justify-center backdrop-blur-sm">
+                  <Workflow className="w-7 h-7" strokeWidth={2} />
+                </div>
+              </div>
+              <h3 className="relative font-display text-2xl font-bold mb-2">
+                We Build
+              </h3>
+              <p className="relative text-paper/70 leading-relaxed">
+                For organizations ready to go further, we develop custom
+                AI-powered systems tailored to your processes and goals.
+              </p>
+              <div className="relative mt-6 h-1 w-10 bg-brand-yellow rounded-full group-hover:w-20 transition-all" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFERINGS — Digdeep + AI Systems */}
+      <section
+        id="offerings"
+        className="relative py-20 lg:py-24 px-6 bg-ink text-paper scroll-mt-24 overflow-hidden"
+      >
+        <div aria-hidden className="absolute inset-0 bg-noise" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-paper/50">
+                <span className="h-px w-8 bg-paper/30" />
+                What We Do
+              </span>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
+                Two surfaces,{" "}
+                <span className="text-brand-yellow">one enablement engine.</span>
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-5">
+            {/* DIGDEEP ACADEMY */}
             <a
               href={DIGDEEP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden bg-zinc-900 rounded-3xl p-10 text-white flex flex-col min-h-[500px] justify-between transition-all hover:shadow-2xl hover:shadow-zinc-900/20"
+              className="group relative overflow-hidden rounded-3xl bg-paper text-ink p-8 md:p-10 flex flex-col min-h-[520px] justify-between transition-all hover:shadow-[0_30px_80px_-20px_rgba(22,200,216,0.35)]"
             >
-              <div className="relative z-10">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                  <GraduationCap className="w-6 h-6 text-white" />
+              {/* Decorative yellow ring echo */}
+              <div
+                aria-hidden
+                className="absolute -right-16 -top-16 w-64 h-64 rounded-full border-[18px] border-brand-yellow opacity-80 group-hover:scale-110 transition-transform duration-700"
+              />
+
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-ink text-brand-yellow rounded-xl flex items-center justify-center">
+                    <GraduationCap className="w-6 h-6" />
+                  </div>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/50">
+                    Academy · Digdeep.id
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold mb-4">Digdeep Academy</h3>
-                <p className="text-zinc-400 text-lg mb-8 max-w-sm">Build practical AI and data literacy for individuals and teams through structured, hands-on learning.</p>
-                <ul className="space-y-3 mb-8 text-zinc-300">
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                  Digdeep Academy
+                </h3>
+                <p className="text-ink/60 text-lg mb-8 max-w-md leading-relaxed">
+                  Build practical AI and data literacy for individuals and teams
+                  through structured, hands-on learning.
+                </p>
+                <ul className="space-y-3 text-ink/80 max-w-md">
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    AI & Data Literacy Foundations
+                    <Check className="w-4 h-4 text-brand-cyan" strokeWidth={3} />
+                    AI &amp; Data Literacy Foundations
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <Check className="w-4 h-4 text-brand-cyan" strokeWidth={3} />
                     Applied Workflow Exercises
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <Check className="w-4 h-4 text-brand-cyan" strokeWidth={3} />
                     Guided Team Upskilling
                   </li>
                 </ul>
               </div>
-              <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 text-sm font-medium border-b border-transparent group-hover:border-white transition-colors">
-                  Visit Digdeep.id <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+
+              <div className="relative mt-10 inline-flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-ink text-brand-yellow group-hover:rotate-[-20deg] transition-transform">
+                  <ArrowUpRight className="w-5 h-5" strokeWidth={2.5} />
+                </span>
+                <span className="font-medium text-ink">
+                  Visit Digdeep.id
                 </span>
               </div>
-              {/* Abstract decorative element */}
-              <div className="absolute right-0 bottom-0 w-64 h-64 bg-zinc-800/50 rounded-full blur-3xl -mr-16 -mb-16"></div>
             </a>
 
-            {/* Right Card */}
+            {/* AI-POWERED SYSTEMS */}
             <a
               id="ai-powered-system"
               href="#contact"
-              className="group relative overflow-hidden bg-zinc-50 border border-zinc-200 rounded-3xl p-10 flex flex-col min-h-[500px] justify-between transition-all hover:border-zinc-300"
+              className="group relative overflow-hidden rounded-3xl bg-brand-cyan text-ink p-8 md:p-10 flex flex-col min-h-[520px] justify-between transition-all hover:shadow-[0_30px_80px_-20px_rgba(255,208,0,0.35)]"
             >
-              <div className="relative z-10">
-                <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center mb-6">
-                  <Sparkles className="w-6 h-6 text-zinc-900" />
+              <div
+                aria-hidden
+                className="absolute -left-20 -bottom-24 w-80 h-80 rounded-full bg-brand-yellow/60 blur-3xl group-hover:scale-110 transition-transform duration-700"
+              />
+
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-ink text-brand-cyan rounded-xl flex items-center justify-center">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-ink/70">
+                    Systems · Tenos Data Teknologi
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-zinc-900">AI-Powered Systems</h3>
-                <p className="text-zinc-500 text-lg mb-8 max-w-sm">From workflow automation to custom intelligent systems, we help organizations build what moves outcomes.</p>
-                <ul className="space-y-3 mb-8 text-zinc-600">
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                  AI-Powered Systems
+                </h3>
+                <p className="text-ink/80 text-lg mb-8 max-w-md leading-relaxed">
+                  From workflow automation to custom intelligent systems, we
+                  help organizations build what actually moves outcomes.
+                </p>
+                <ul className="space-y-3 text-ink max-w-md">
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
+                    <Check className="w-4 h-4 text-ink" strokeWidth={3} />
                     AI-Driven Workflow Design
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
-                    Decision Support & Insights
+                    <Check className="w-4 h-4 text-ink" strokeWidth={3} />
+                    Decision Support &amp; Insights
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-900"></div>
+                    <Check className="w-4 h-4 text-ink" strokeWidth={3} />
                     Custom System Development
                   </li>
                 </ul>
               </div>
-              <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 border-b border-transparent group-hover:border-zinc-900 transition-colors">
-                  Let&apos;s Build Together <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+
+              <div className="relative mt-10 inline-flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-ink text-brand-cyan group-hover:rotate-[-20deg] transition-transform">
+                  <ArrowUpRight className="w-5 h-5" strokeWidth={2.5} />
                 </span>
+                <span className="font-medium text-ink">Let&apos;s build together</span>
               </div>
             </a>
           </div>
         </div>
       </section>
 
-      {/* 4) WHY TENOS IS DIFFERENT */}
-      <section className="py-24 px-6 bg-zinc-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">
-            &quot;AI enablement that starts with people <br className="hidden md:block" />
-            <span className="text-zinc-400">and scales to systems.</span>&quot;
-          </h2>
-          <div className="grid sm:grid-cols-3 gap-8 mt-16 text-left">
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Literacy First</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                We help people understand AI and data clearly, then apply them meaningfully through programs at Digdeep Academy.
+      {/* WHY TENOS IS DIFFERENT — pull quote + cards */}
+      <section id="why" className="relative py-24 lg:py-32 px-6 scroll-mt-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-ink/50">
+              <span className="h-px w-8 bg-ink/30" />
+              Why Tenos
+              <span className="h-px w-8 bg-ink/30" />
+            </span>
+            <blockquote className="mt-6 font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink leading-[1.08] max-w-5xl mx-auto">
+              <span className="text-ink/30">&ldquo;</span>
+              AI enablement that starts with{" "}
+              <span className="marker-underline">people</span>
+              <br className="hidden md:block" /> and scales to{" "}
+              <span className="text-ink/50">systems.</span>
+              <span className="text-ink/30">&rdquo;</span>
+            </blockquote>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-5 mt-16">
+            <div className="group relative p-6 rounded-3xl bg-paper border border-ink/10 hover:-translate-y-1 hover:border-ink/30 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-brand-cyan-soft text-ink flex items-center justify-center mb-5">
+                <GraduationCap className="w-5 h-5" />
+              </div>
+              <h3 className="font-display text-lg font-bold mb-2">
+                Literacy First
+              </h3>
+              <p className="text-ink/60 text-sm leading-relaxed">
+                We help people understand AI and data clearly, then apply them
+                meaningfully through programs at Digdeep Academy.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Applied Workflows</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                We turn AI knowledge into everyday execution by simplifying work, reducing friction, and accelerating results.
+            <div className="group relative p-6 rounded-3xl bg-paper border border-ink/10 hover:-translate-y-1 hover:border-ink/30 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-brand-yellow-soft text-ink flex items-center justify-center mb-5">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h3 className="font-display text-lg font-bold mb-2">
+                Applied Workflows
+              </h3>
+              <p className="text-ink/60 text-sm leading-relaxed">
+                We turn AI knowledge into everyday execution—simplifying work,
+                reducing friction, and accelerating results.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-lg font-bold mb-3 text-white">Systems That Scale</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                When needed, we design and build AI-powered systems tailored to organizational processes and goals.
+            <div className="group relative p-6 rounded-3xl bg-ink text-paper border border-ink hover:-translate-y-1 transition-all overflow-hidden">
+              <div
+                aria-hidden
+                className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full border-[8px] border-brand-yellow/70"
+              />
+              <div className="relative w-10 h-10 rounded-xl bg-paper/10 text-paper flex items-center justify-center mb-5 backdrop-blur-sm">
+                <Workflow className="w-5 h-5" />
+              </div>
+              <h3 className="relative font-display text-lg font-bold mb-2">
+                Systems That Scale
+              </h3>
+              <p className="relative text-paper/70 text-sm leading-relaxed">
+                When needed, we design and build AI-powered systems tailored to
+                organizational processes and goals.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5) ABOUT TENOS */}
-      <section id="about" className="py-24 px-6 bg-zinc-50 scroll-mt-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-          <p className="text-xl leading-relaxed text-zinc-600">
-            Tenos exists to close the gap between AI&apos;s potential and how people actually use it. We start with literacy - helping people understand and apply AI in their work - and go all the way to building intelligent systems that transform how organizations operate.
-          </p>
+      {/* ABOUT / MISSION */}
+      <section
+        id="about"
+        className="relative py-24 lg:py-28 px-6 scroll-mt-24 border-t border-ink/10 bg-paper"
+      >
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
+            <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-ink/50">
+              <span className="h-px w-8 bg-ink/30" />
+              Our Mission
+            </span>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tight">
+              Close the gap between AI&apos;s{" "}
+              <span className="marker-underline">potential</span> and how people
+              actually use it.
+            </h2>
+          </div>
+
+          <div className="lg:col-span-7 lg:pl-8 lg:border-l border-ink/10">
+            <p className="text-lg md:text-xl leading-relaxed text-ink/70">
+              Tenos starts with literacy—helping people understand and apply AI
+              in their work—and goes all the way to building intelligent systems
+              that transform how organizations operate. Practical, human, and
+              built to last.
+            </p>
+
+            <dl className="mt-10 grid grid-cols-3 gap-4">
+              <div className="p-5 rounded-2xl bg-brand-cyan-soft">
+                <dt className="text-[11px] font-mono uppercase tracking-widest text-ink/60">
+                  Focus
+                </dt>
+                <dd className="mt-2 font-display text-2xl font-bold">
+                  People-first
+                </dd>
+              </div>
+              <div className="p-5 rounded-2xl bg-brand-yellow-soft">
+                <dt className="text-[11px] font-mono uppercase tracking-widest text-ink/60">
+                  Method
+                </dt>
+                <dd className="mt-2 font-display text-2xl font-bold">
+                  Hands-on
+                </dd>
+              </div>
+              <div className="p-5 rounded-2xl bg-ink text-paper">
+                <dt className="text-[11px] font-mono uppercase tracking-widest text-paper/60">
+                  Outcome
+                </dt>
+                <dd className="mt-2 font-display text-2xl font-bold">
+                  Systems
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
 
-      {/* 6) FINAL CTA SECTION */}
-      <section id="contact" className="py-32 px-6 scroll-mt-20">
-        <div className="max-w-5xl mx-auto bg-zinc-900 rounded-[2.5rem] p-12 md:p-24 text-center relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 to-transparent opacity-50"></div>
+      {/* FINAL CTA */}
+      <section id="contact" className="relative px-6 py-24 lg:py-32 scroll-mt-24">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] bg-ink text-paper overflow-hidden">
+          {/* Decorative layers */}
+          <div
+            aria-hidden
+            className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-brand-cyan/25 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="absolute -bottom-32 -right-16 w-[380px] h-[380px] rounded-full border-[22px] border-brand-yellow/80 animate-float"
+          />
 
-          <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Build Your AI Journey with Tenos</h2>
-            <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-              Whether you&apos;re just starting your AI journey or ready to build an intelligent system, we&apos;re here to guide you every step of the way.
+          <div className="relative p-10 md:p-20 text-center">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-paper/10 border border-paper/20 text-[11px] font-mono uppercase tracking-[0.25em] text-paper/80">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan" />
+              Start Today
+            </span>
+            <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+              Build your AI journey
+              <br />
+              with <span className="text-brand-yellow">Tenos</span>.
+            </h2>
+            <p className="mt-6 text-paper/70 text-lg max-w-xl mx-auto">
+              Whether you&apos;re just starting your AI journey or ready to build
+              an intelligent system, we&apos;re here to guide you every step of
+              the way.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href={DIGDEEP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 bg-white text-zinc-900 rounded-full font-bold hover:bg-zinc-100 transition-all inline-flex items-center justify-center gap-2"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 pl-6 pr-2 py-2 bg-paper text-ink rounded-full font-semibold hover:bg-paper/90 transition-all"
               >
                 Visit Digdeep Academy
-                <ArrowRight className="w-4 h-4" />
+                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-cyan text-ink group-hover:translate-x-1 transition-transform">
+                  <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+                </span>
               </a>
               <a
                 href={`https://wa.me/${CONTACT_WHATSAPP}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3 bg-transparent border border-paper/30 text-paper rounded-full font-semibold hover:bg-paper/10 transition-all inline-flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp Us
@@ -274,30 +597,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7) FOOTER */}
-      <footer className="py-12 px-6 border-t border-zinc-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-zinc-500">
-          <p className="flex items-center gap-2">
+      {/* FOOTER */}
+      <footer className="border-t border-ink/10 bg-paper">
+        <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-ink/60">
+          <div className="flex items-center gap-3">
             <Image
               src="/tenos-logomark.png"
-              alt="Tenos icon"
-              width={20}
-              height={20}
-              className="h-5 w-5 rounded"
+              alt=""
+              width={28}
+              height={28}
+              className="h-7 w-7"
             />
-            <span>© {new Date().getFullYear()} Tenos Data Teknologi. All rights reserved.</span>
-          </p>
-          <p className="flex items-center gap-2">
+            <div>
+              <p className="font-semibold text-ink">Tenos Data Teknologi</p>
+              <p className="text-xs">
+                © {new Date().getFullYear()} — All rights reserved.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 text-xs">
             <a
               href={DIGDEEP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-zinc-900 hover:underline"
+              className="font-semibold text-ink hover:text-ink/70 transition-colors"
             >
               Digdeep.id
             </a>
-            <span>- Academy powered by Tenos</span>
-          </p>
+            <span className="text-ink/30">·</span>
+            <span>Academy powered by Tenos</span>
+            <span className="text-ink/30">·</span>
+            <a
+              href={`https://wa.me/${CONTACT_WHATSAPP}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-ink transition-colors"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </footer>
     </div>
